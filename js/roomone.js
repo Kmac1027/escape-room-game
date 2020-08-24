@@ -27,8 +27,8 @@ function quizOne(event) {
   if (alt === '') {
     parentElementQuizOne.removeEventListener
     alert('correct')
+    //run functiont o run 2nd question
   } else {
     life--;
   }
-
 }
