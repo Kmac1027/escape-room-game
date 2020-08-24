@@ -16,6 +16,9 @@ function checkLocalStorageForLife(){
 }
 // var jsonLife = JSON.stringify(life);
 // localStorage.setItems('life', jsonLife);
+if (life === 9){
+  
+}
 
 parentElementQuizOne.addEventListener('click', quizOne)
 
