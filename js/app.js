@@ -1,6 +1,9 @@
 'use strict'
 
 var life = '';
+var parentElementQuizOne = document.getElementById('')
+var parentElementQuizTwo = document.getElementById('')
+var parentElementQuizThree = document.getElementById('')
 
 function checkLocalStorageForLife(){
   if (localStorage.getItems('life') === null){
@@ -13,3 +16,9 @@ function checkLocalStorageForLife(){
 }
 // var jsonLife = JSON.stringify(life);
 // localStorage.setItems('life', jsonLife);
+
+parentElementQuizOne.addEventListener('click', quizOne)
+
+function quizOne (event){
+  
+}
