@@ -30,5 +30,4 @@ function quizOne(event) {
   } else {
     life--;
   }
-
 }
