@@ -4,7 +4,7 @@
 
 ## Wireframe
 
-![Page 1](img/wireframe-domain/web1920-0.png)
+![Page 1](img/wireframe-domain/Web1920–0.png)
 ![Page 2](img/wireframe-domain/web1920-1.png)
 ![Page 3](img/wireframe-domain/web1920-2.png)
 ![Page 4](img/wireframe-domain/web1920-3.png)
