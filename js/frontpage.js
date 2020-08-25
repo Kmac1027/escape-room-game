@@ -1,7 +1,9 @@
 'use strict'
 var form = document.getElementById('playerName')
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', submit)
+
+function submit(event) {
   event.preventDefault();
   var playerName = event.target.playername.value;
   var jsonPlayerName = JSON.stringify(playerName);
@@ -12,4 +14,5 @@ form.addEventListener('submit', function (event) {
   a.title = "link to first room";
   a.href = "../pages/firstroom.html";
   form.appendChild(a);
-})
+  form.removeEventListender('submit', submit );
+}
