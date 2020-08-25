@@ -113,7 +113,7 @@ function quizThree() {
       alert('correct');
       var jsonLife = JSON.stringify(life);
       localStorage.setItem('life', jsonLife);
-      window.location.href = 'roomthreevictory.html';
+      window.location.href = 'roomtwovictory.html';
     } else {
       life--;
       renderLife(life)
