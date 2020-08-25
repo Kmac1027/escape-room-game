@@ -8,6 +8,12 @@ img{
   margin-left: auto;
   margin-right: auto;
 }
+#wrong {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1
+}
 
 #riddle{
   font-size: 2em;
