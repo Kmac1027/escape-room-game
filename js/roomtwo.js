@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var life = '';
 var parentElementQuiz = document.getElementById('clickable');
@@ -6,25 +6,22 @@ var parentElementRiddle = document.getElementById('riddle');
 var parentElementLife = document.getElementById('life');
 var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
-var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png', ]
-
-
+var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png'];
 
 function Clues (clue){
   this.clue = clue;
   allCluesArray.push(this);
 }
 
-new Clues ('I have many feet but, i cannot stand. I cannot sit but, I can lean.');
-new Clues ('I have hands that say hi but nobody waves back. I die when I am not needed.');
-new Clues ('I am a foot long and am slippery.');
+new Clues ('Almost everyone sees me without noticing me, for what is beyond is what he or she seeks');
+new Clues ('What do you use to hoe a row, slay a foe, and wring with woe?');
+new Clues ('Everyone has me but nobody can lose me.');
 
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
   var parseName = JSON.parse(playerName);
   var renderName = document.createElement('h2');
   renderName.textContent = parseName;
-  console.log(parseName);
   parentElementPlayerName.appendChild(renderName);
 }
 checkLocalStorageForName();
@@ -50,27 +47,29 @@ function renderLife(life) {
     var lifeImage = document.createElement('img')
     lifeImage.setAttribute('src', lifeImages[0]);
     parentElementLife.appendChild(lifeImage);
-    window.location.href = 'deathscreen.html';
     alert('you are dead, Game Over');
+    window.location.href = 'deathscreen.html';
+    
   } else {
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
     maxLife.textContent = 'Life: ' + life + '/5';
     parentElementLife.appendChild(maxLife);
-    var lifeImage = document.createElement('img')
+    var lifeImage = document.createElement('img');
     lifeImage.setAttribute('src', lifeImages[life]);
     parentElementLife.appendChild(lifeImage);
   }
 }
-// quistion 1
+
+//quiz 1
 renderLife(life);
 var clueText = document.createElement('p');
 clueText.textContent = allCluesArray[0].clue;
 parentElementRiddle.appendChild(clueText);
-parentElementQuiz.addEventListener('click', click)
+parentElementQuiz.addEventListener('click', click);
 function click(event) {
-  var item = event.target.id;
-  if (item === 'broom') {
+  var item = event.target.alt;
+  if (item === 'windowone' || item === 'windowtwo') {
     parentElementQuiz.removeEventListener('click', click);
     alert('correct');
     quizTwo();
@@ -82,7 +81,6 @@ function click(event) {
     }
   }
 }
-// question 2
 function quizTwo() {
   parentElementRiddle.innerHTML = '';
   var clueText = document.createElement('p');
@@ -90,8 +88,8 @@ function quizTwo() {
   parentElementRiddle.appendChild(clueText);
   parentElementQuiz.addEventListener('click', click)
   function click(event) {
-    var item = event.target.id;
-    if (item === 'fan') {
+    var item = event.target.alt;
+    if (item === 'hands') {
       parentElementQuiz.removeEventListener('click', click);
       alert('correct');
       quizThree();
@@ -102,7 +100,6 @@ function quizTwo() {
     }
   }
 }
-// question 3
 function quizThree() {
   parentElementRiddle.innerHTML = '';
   var clueText = document.createElement('p');
@@ -110,13 +107,13 @@ function quizThree() {
   parentElementRiddle.appendChild(clueText);
   parentElementQuiz.addEventListener('click', click)
   function click(event) {
-    var item = event.target.id;
-    if (item === 'slippers') {
+    var item = event.target.alt;
+    if (item === 'shadow') {
       parentElementQuiz.removeEventListener('click', click);
       alert('correct');
       var jsonLife = JSON.stringify(life);
       localStorage.setItem('life', jsonLife);
-      window.location.href = 'roomonevictory.html';
+      window.location.href = 'roomthreevictory.html';
     } else {
       life--;
       renderLife(life)
