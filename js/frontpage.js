@@ -1,4 +1,5 @@
 'use strict'
+localStorage.clear();
 var form = document.getElementById('playerName')
 
 form.addEventListener('submit', submit)
