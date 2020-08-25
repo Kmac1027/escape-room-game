@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  color: white;
+}
+h1 {
+  text-align: center;
+  color: red;
+  font-size: 4em;
+}
+#img {
+  text-align: center;
+}

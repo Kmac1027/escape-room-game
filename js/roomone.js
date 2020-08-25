@@ -6,15 +6,18 @@ var parentElementRiddle = document.getElementById('riddle');
 var parentElementLife = document.getElementById('life');
 var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
+var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png', ]
+
+
 
 function Clues (clue){
   this.clue = clue;
   allCluesArray.push(this);
 }
 
-new Clues ('I have many feet but, i cannot stand. I cannot sit but, I can lean. What am I?');
-new Clues ('I have hands that say hi but nobody waves back. I die when I am not needed. what am I?');
-new Clues ('I am a foot long and am slippery. what am I?');
+new Clues ('I have many feet but, i cannot stand. I cannot sit but, I can lean.');
+new Clues ('I have hands that say hi but nobody waves back. I die when I am not needed.');
+new Clues ('I am a foot long and am slippery.');
 
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
@@ -44,12 +47,19 @@ function renderLife(life) {
     var maxLife = document.createElement('p');
     maxLife.textContent = life;
     parentElementLife.appendChild(maxLife);
+    var lifeImage = document.createElement('img')
+    lifeImage.setAttribute('src', lifeImages[0]);
+    parentElementLife.appendChild(lifeImage);
+    window.location.href = 'deathscreen.html';
     alert('you are dead, Game Over');
   } else {
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
     maxLife.textContent = 'Life: ' + life + '/5';
     parentElementLife.appendChild(maxLife);
+    var lifeImage = document.createElement('img')
+    lifeImage.setAttribute('src', lifeImages[life]);
+    parentElementLife.appendChild(lifeImage);
   }
 }
 // quistion 1
