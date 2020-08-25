@@ -13,7 +13,7 @@ function submit(event) {
   var link = document.createTextNode('Click Here to Enter');
   a.appendChild(link);
   a.title = "link to first room";
-  a.href = "../pages/firstroom.html";
+  a.href = "./pages/firstroom.html";
   form.appendChild(a);
   form.removeEventListener('submit', submit );
 }
