@@ -1,0 +1,14 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+
+h1{
+  font-size: 5rem;
+  color: lightgrey;
+}
+
+p{
+color: grey;
+font-size: 1.5rem;
+}
