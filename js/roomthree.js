@@ -2,7 +2,6 @@
 
 var life = '';
 var parentElementQuizOne = document.getElementById('clickable');
-var parentElementRiddle = document.getElementById('riddle');
 var parentElement = document.getElementById('riddle');
 var allCluesArray = [];
 

@@ -14,5 +14,5 @@ function submit(event) {
   a.title = "link to first room";
   a.href = "../pages/firstroom.html";
   form.appendChild(a);
-  form.removeEventListender('submit', submit );
+  form.removeEventListener('submit', submit );
 }
