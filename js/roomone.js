@@ -1,10 +1,14 @@
 'use strict'
 
 var life = '';
-var parentElementQuizOne = document.getElementById('')
-var parentElementQuizTwo = document.getElementById('')
-var parentElementQuizThree = document.getElementById('')
+var parentElementQuizOne = document.getElementById('clickable')
+var parentElementRiddle = document.getElementById('riddle')
 
+function checkLocalStorageForName() {
+  var playerName = localStorage.getItem('playerName')
+  var parseName = JSON.parse(playerName)
+
+}
 function checkLocalStorageForLife() {
   if (localStorage.getItems('life') === null) {
     life = 10
@@ -19,16 +23,45 @@ function checkLocalStorageForLife() {
 if (life === 9) {
 
 }
-
-parentElementQuizOne.addEventListener('click', quizOne)
-
-function quizOne(event) {
-  alt = event.target.alt;
-  if (alt === '') {
-    parentElementQuizOne.removeEventListener
-    alert('correct')
-    //run functiont o run 2nd question
-  } else {
-    life--;
+function quizeOne(){
+  parentElementQuizOne.addEventListener('click', click)
+  function click(event) {
+    var item = event.target.id;
+    if (item === 'broom') {
+      parentElementQuizOne.removeEventListener('click', click);
+      alert('correct');
+      quizTwo();
+    } else {
+      life--;
+      alert('wrong, try again')
+    }
   }
 }
+function quizTwo(){
+  parentElementQuizOne.addEventListener('click', click)
+  function click(event) {
+    var item = event.target.id;
+    if (item === 'fan') {
+      parentElementQuizOne.removeEventListener('click', click);
+      alert('correct');
+      quizThree();
+    } else {
+      life--;
+      alert('wrong, try again')
+    }
+  }
+}
+function quizThree(){
+  parentElementQuizOne.addEventListener('click', click)
+  function click(event) {
+    var item = event.target.id;
+    if (item === 'slippers') {
+      parentElementQuizOne.removeEventListener('click', click);
+      alert('correct');
+    } else {
+      life--;
+      alert('wrong, try again')
+    }
+  }
+}
+quizeOne();
