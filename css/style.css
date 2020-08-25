@@ -61,7 +61,7 @@ fieldset {
 }
 
 label, submit {
-  font-family: 'Big Shoulders Text', cursive
+  font-family: 'Big Shoulders Text', cursive;
   background-color: #DEAA1F;
   
   text-size: 1em;
