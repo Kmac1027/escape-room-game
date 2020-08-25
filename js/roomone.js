@@ -71,7 +71,6 @@ function click(event) {
     alert('wrong, try again')
     }
   }
-<<<<<<< HEAD
 }
 // question 2
 function quizTwo() {
@@ -115,6 +114,3 @@ function quizThree() {
     }
   }
 }
-=======
-}
->>>>>>> ed687a3c9f702cf284208a0d01d4053f4ba18f33

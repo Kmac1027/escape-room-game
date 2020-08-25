@@ -2,23 +2,31 @@
 <html>
   <head>
     <title>Escape Room</title>
-    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
-    <!-- <link href="css/style.css" rel="stylesheet" type="text/css"/> -->
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/styleone.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <header>
       <section>Level 1</section>
-      <section id="question">Question Status</section>
-      <section id="health">Health Status</section>
+      <section id="playerName"></section>
+      <section id="life"></section>
     </header>
     <main>
+      <section id="clickable">
+        <img src="../img/kitchen-bg.jpg" usemap="#image-map">
+  
+        <map name="image-map">
+            <area id="slippers" target="_self" alt="Slipper" title="Slipper"  coords="596,578,562,548" shape="rect">
+            <area id="broom" target="_self" alt="broom" title="broom"  coords="748,192,791,531" shape="rect">
+            <area id="fan" target="_self" alt="fan" title="fan" coords="251,162,81" shape="circle">
+        </map>
       
     </main>
     <footer>
       <section id="riddle">
         RIDDLE BOX
       </section>
-      
+      <script src="../js/roomone.js"></script>
     </footer>
   </body>
 </html>
