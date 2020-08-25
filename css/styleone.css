@@ -1,7 +1,14 @@
+body {
+  background-color: black;
+  text-align: center;
+}
 
-span {
-  width: 50px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
+h1{
+  font-size: 5rem;
+  color: lightgrey;
+}
+
+p{
+color: grey;
+font-size: 1.5rem;
 }
