@@ -3,6 +3,17 @@
 var life = '';
 var parentElementQuizOne = document.getElementById('clickable');
 var parentElementRiddle = document.getElementById('riddle');
+var parentElement = document.getElementById('riddle');
+var allCluesArray = [];
+
+function Clues (clue){
+  this.clue = clue;
+  allCluesArray.push(this);
+}
+
+new Clues ('Your first riddle is: I am a necessity to some and a treasure to many.');
+new Clues ('Your next clue is: I am full of light but always in shade.');
+new Clues ('WRITE A THIRD CLUE');
 
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
@@ -21,7 +32,12 @@ function checkLocalStorageForLife() {
 // var jsonLife = JSON.stringify(life);
 // localStorage.setItems('life', jsonLife);
 
+
+
 function quizeOne(){
+  var clueText = document.createElement('p');
+  clueText.textContent = allCluesArray[0].clue;
+  parentElement.appendChild(clueText);
   parentElementQuizOne.addEventListener('click', click);
   function click(event) {
     var item = event.target.id;
@@ -35,7 +51,12 @@ function quizeOne(){
     }
   }
 }
+
 function quizTwo(){
+  parentElement.innerHTML = '';
+  var clueText = document.createElement('p');
+  clueText.textContent = allCluesArray[1].clue;
+  parentElement.appendChild(clueText);
   parentElementQuizOne.addEventListener('click', click);
   function click(event) {
     var item = event.target.id;
@@ -50,6 +71,10 @@ function quizTwo(){
   }
 }
 function quizThree(){
+  parentElement.innerHTML = '';
+  var clueText = document.createElement('p');
+  clueText.textContent = allCluesArray[2].clue;
+  parentElement.appendChild(clueText);
   parentElementQuizOne.addEventListener('click', click);
   function click(event) {
     var item = event.target.id;
@@ -62,4 +87,10 @@ function quizThree(){
     }
   }
 }
+
+function generateRiddle (){
+  parentElement.textContent = allClues[0];
+}
+
 quizeOne();
+
