@@ -24,4 +24,5 @@ function submit(event) {
  audio.play();
   
 }
-
+var audio = new Audio('../audio/field.mp3');
+ audio.play();

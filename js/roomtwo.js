@@ -166,3 +166,6 @@ function gameOver() {
     window.location.href = 'deathscreen.html';
   }
 }
+var audio = new Audio('../audio/room2.mp3');
+ audio.play();
+  
