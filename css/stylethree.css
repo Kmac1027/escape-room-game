@@ -21,3 +21,8 @@ img{
   text-align: center;
   margin: 15px;
 }
+#answer {
+  position: absolute;
+  top: 500px;
+  left: 700px;
+}
