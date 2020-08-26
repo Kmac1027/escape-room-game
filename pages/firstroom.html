@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Escape Room</title>
-    <link href="../css/reset.css" rel="stylesheet" type="text/css"/>
-  <link href="../css/styleone.css" rel="stylesheet" type="text/css"/>
-  </head>
-  <body>
-    <header>
-      <section>Level 1</section>
-      <section id="playerName"></section>
-      <section id="life"></section>
-    </header>
-    <main>
-      <section id="clickable">
-        <img src="../img/kitchen-bg.jpg" usemap="#image-map">
-  
-        <map name="image-map">
-            <area id="slippers" target="_self" alt="Slipper" title="Slipper"  coords="596,578,562,548" shape="rect">
-            <area id="broom" target="_self" alt="broom" title="broom"  coords="748,192,791,531" shape="rect">
-            <area id="fan" target="_self" alt="fan" title="fan" coords="251,162,81" shape="circle">
-        </map>
-      </section>
-    </main>
-    <footer>
+
+<head>
+  <title>Escape Room</title>
+  <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../css/styleone.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&family=Cardo:wght@700&family=Eater&family=Germania+One&family=Spectral&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <p>Escape Room </p>
+    <section id="playerNav">Level 1</section>
+    <section id="playerName"></section>
+    <section id="life"></section>
+  </header>
+  <main>
+    <div id="answer"></div>
+    <section id="clickable">
+
       <section id="riddle">
       </section>
-      <script src="../js/roomone.js"></script>
-    </footer>
-  </body>
+      <img id="centerPic" src="../img/kitchen-bg.jpg" usemap="#image-map">
+
+      <map name="image-map">
+        <area id="slippers" target="_self" alt="Slipper" title="Slipper" coords="555,529,522,501" shape="rect">
+        <area id="broom" target="_self" alt="broom" title="broom" coords="730,488,691,172" shape="rect">
+        <area id="fan" target="_self" alt="fan" title="fan" coords="239,151,74" shape="circle">
+      </map>
+    </section>
+    <audio>
+      <source src="../audio/behind-you.mp3" type="audio/mp3" autoplay="true" loop=infinite>
+    </audio>
+  </main>
+  <footer>
+    <script src="../js/roomone.js"></script>
+  </footer>
+</body>
+
 </html>

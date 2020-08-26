@@ -1,23 +1,86 @@
-body{
+header {
+  display: inline-flex;
+  line-height: 3em;
+}
+body {
   background-color: black;
+  text-align: center;
   color: white;
 }
 
-img{
+h1 {
+  font-size: 5rem;
+  color: lightgrey;
+}
+#centerPic {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-#wrong {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1
-}
+
+header>p{
+  font-family: 'Eater', cursive;
+  -webkit-text-stroke: 1px black;
+  font-size: 2.8em;
+  padding-right: 20px;
+  margin-top: 5px;
+  color: #5b1615;
+ }
 
 #riddle{
-  font-size: 2em;
+  font-family: 'Franklin Gothic regular', 'Arial Narrow', Arial, sans-serif; 
+  font-size: 1.8em;
   color: white;
   text-align: center;
-  margin: 15px;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+#playerNav {
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 2rem;
+  float: right;
+  color: #DEAA1F;
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 10px; 
+  margin-left: auto;
+  margin-right: 10px;
+}
+#playerName {
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 2em;
+  float: left;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+#life {
+  font-family: 'Big Shoulders Text', cursive;
+  display: inline-flex;
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #2d75be;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+} 
+
+#lifeicon {
+  margin-top: 3px;
+  margin-left: 23px;
+  float: right;
+}
+
+#answer {
+  position: absolute;
+  top: 500px;
+  left: 700px;
+}
+#gameOver {
+  position: absolute;
+  top: 500px;
+  left: 700px;
 }
