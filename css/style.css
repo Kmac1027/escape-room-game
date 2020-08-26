@@ -10,7 +10,6 @@ body {
   border-radius: 25px;
 }
 
-
 .blinking{
   animation:blinkingText 2s infinite;
 }
@@ -19,9 +18,9 @@ body {
   text-align: center;
 }
 
-
 .scroll-up {
  text-align: center;
+ padding-top: 20px;
  height: 300px;
  width: 600px;	
  overflow: hidden;
@@ -30,6 +29,7 @@ body {
  color: white;
  /* border: 1px solid orange; */
 }
+
 .scroll-up p {
  /* position: absolute; */
  font-family: 'Germania One', cursive;
@@ -69,7 +69,6 @@ body {
  }
 }
 
-
 h1 {
   font-family: 'Eater', cursive;
   -webkit-text-stroke: 1px black;
@@ -86,7 +85,6 @@ h1 {
 }
 
 h2 {
-  
   font-family: 'Germania One', cursive;
   /* -webkit-text-stroke: 1px #992624; */
   color: #992624;
@@ -115,7 +113,7 @@ p{
 }
 
 
-#st {
+/* #st {
   background: rgba(241, 214, 126, 0.842);
   background-image: url("img/doll-heads-bg.jpg");
   background-repeat: no-repeat;
@@ -126,17 +124,12 @@ p{
   border-radius: 25px;
   margin-left: 50px;
   margin-right: 50px; 
- 
-
-}
+} */
 
 fieldset {
-  margin-left: 50px;
-  margin-right: 50px; 
   text-align: center;
   margin-top: 10px;
   font-family: 'Germania One', cursive;
-
 }
 
 label, submit {
@@ -146,18 +139,15 @@ label, submit {
   font-size: 1.5em;
 }
 
+label{
+  margin-bottom: 50px;
+}
 
 #playerName {
   margin-top: 1px;
   text-align: center;
   padding: 10px;
   padding-bottom: 20px;
-  /* margin-right: 450px;
-  margin-left: 450px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 25px; */
 }
 
 #playbox {
@@ -175,19 +165,18 @@ a {
   text-align: center;
   font-size: 1.5em;
   text-decoration: none; 
-  /* margin-top: 30px; */
   line-height: 10px;
   font-family: 'Big Shoulders Text', cursive;
 }
 
 button{
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-family: 'Big Shoulders Text', cursive;
 }
 
 input{
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
   font-family: 'Big Shoulders Text', cursive;
 }
