@@ -1,23 +1,24 @@
 'use strict'
 
 var life = '';
+var timeOut = '';
 var parentElementQuiz = document.getElementById('clickable');
 var parentElementRiddle = document.getElementById('riddle');
 var parentElementLife = document.getElementById('life');
 var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
-var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png', ]
+var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png',]
 
 
 
-function Clues (clue){
+function Clues(clue) {
   this.clue = clue;
   allCluesArray.push(this);
 }
 
-new Clues ('I have many feet but, i cannot stand. I cannot sit but, I can lean.');
-new Clues ('I have hands that say hi but nobody waves back. I die when I am not needed.');
-new Clues ('I am a foot long and am slippery.');
+new Clues('I have many feet but, i cannot stand. I cannot sit but, I can lean.');
+new Clues('I have hands that say hi but nobody waves back. I die when I am not needed.');
+new Clues('I am a foot long and am slippery.');
 
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
@@ -42,6 +43,7 @@ checkLocalStorageForLife();
 
 function renderLife(life) {
   if (life <= 0) {
+    wrong();
     parentElementQuiz.removeEventListener('click', click);
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
@@ -74,13 +76,13 @@ function click(event) {
   var item = event.target.id;
   if (item === 'broom') {
     parentElementQuiz.removeEventListener('click', click);
-    alert('correct');
+    right();
     quizTwo();
   } else {
     life--;
     renderLife(life);
-    if (life > 0){
-    alert('wrong, try again')
+    if (life > 0) {
+      wrong();
     }
   }
 }
@@ -95,12 +97,14 @@ function quizTwo() {
     var item = event.target.id;
     if (item === 'fan') {
       parentElementQuiz.removeEventListener('click', click);
-      alert('correct');
+      right();
       quizThree();
     } else {
       life--;
       renderLife(life)
-      alert('wrong, try again')
+      if (life > 0) {
+        wrong();
+      }
     }
   }
 }
@@ -115,14 +119,37 @@ function quizThree() {
     var item = event.target.id;
     if (item === 'slippers') {
       parentElementQuiz.removeEventListener('click', click);
-      alert('correct');
+      right();
       var jsonLife = JSON.stringify(life);
       localStorage.setItem('life', jsonLife);
       window.location.href = 'roomonevictory.html';
     } else {
       life--;
       renderLife(life)
-      alert('wrong, try again')
+      if (life > 0) {
+        wrong();
+      }
     }
+  }
+}
+
+function wrong() {
+  var parentElementWrong = document.getElementById('answer');
+  var wrongImg = document.createElement('img');
+  wrongImg.setAttribute('src', '../img/red-check.png');
+  parentElementWrong.appendChild(wrongImg);
+  timeOut = setTimeout(clearX, 1000);
+  function clearX() {
+    parentElementWrong.innerHTML = '';
+  }
+}
+function right() {
+  var parentElementAnswer = document.getElementById('answer');
+  var rightImg = document.createElement('img');
+  rightImg.setAttribute('src', '../img/green-check.png');
+  parentElementAnswer.appendChild(rightImg);
+  timeOut = setTimeout(clearX, 1000);
+  function clearX() {
+    parentElementAnswer.innerHTML = '';
   }
 }
