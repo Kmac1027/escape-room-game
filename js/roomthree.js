@@ -121,7 +121,11 @@ function quizThree() {
       right();
       var jsonLife = JSON.stringify(life);
       localStorage.setItem('life', jsonLife);
-      window.location.href = 'roomthreevictory.html';
+      timeOut = setTimeout(nextPage, 1000);
+      function nextPage() {
+        window.location.href = 'roomthreevictory.html';
+      }
+     
     } else {
       life--;
       renderLife(life);
@@ -145,7 +149,7 @@ function wrong() {
   }
 }
 function right() {
-  var audio = new Audio('../audio/sfx/correct.m4a');
+  var audio = new Audio('../audio/sfx/correct.mp3');
   audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var rightImg = document.createElement('img');
