@@ -49,9 +49,10 @@ function renderLife(life) {
     parentElementLife.appendChild(maxLife);
     var lifeImage = document.createElement('img')
     lifeImage.setAttribute('src', lifeImages[0]);
+    lifeImage.setAttribute('id', 'lifeicon');
     parentElementLife.appendChild(lifeImage);
     window.location.href = 'deathscreen.html';
-    alert('you are dead, Game Over');
+    alert('You are Dead, Game Over');
   } else {
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
@@ -59,10 +60,11 @@ function renderLife(life) {
     parentElementLife.appendChild(maxLife);
     var lifeImage = document.createElement('img')
     lifeImage.setAttribute('src', lifeImages[life]);
+    lifeImage.setAttribute('id', 'lifeicon');
     parentElementLife.appendChild(lifeImage);
   }
 }
-// quistion 1
+// question 1
 renderLife(life);
 var clueText = document.createElement('p');
 clueText.textContent = allCluesArray[0].clue;
