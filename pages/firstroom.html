@@ -4,16 +4,19 @@
     <title>Escape Room</title>
     <link href="../css/reset.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styleone.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&family=Cardo:wght@700&family=Eater&family=Germania+One&family=Spectral&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <section>Level 1</section>
+      <section id="playerNav">Level 1</section>
       <section id="playerName"></section>
       <section id="life"></section>
     </header>
     <main>
       <section id="clickable">
-        <img src="../img/kitchen-bg.jpg" usemap="#image-map">
+        <section id="riddle">
+        </section>
+        <img id="centerPic" src="../img/kitchen-bg.jpg" usemap="#image-map">
   
         <map name="image-map">
             <area id="slippers" target="_self" alt="Slipper" title="Slipper"  coords="596,578,562,548" shape="rect">
@@ -23,8 +26,7 @@
       </section>
     </main>
     <footer>
-      <section id="riddle">
-      </section>
+     
       <script src="../js/roomone.js"></script>
     </footer>
   </body>
