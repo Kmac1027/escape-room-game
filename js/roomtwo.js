@@ -9,14 +9,14 @@ var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
 var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png'];
 
-function Clues (clue){
+function Clues(clue) {
   this.clue = clue;
   allCluesArray.push(this);
 }
 
-new Clues ('Almost everyone sees me without noticing me, for what is beyond is what he or she seeks');
-new Clues ('What do you use to hoe a row, slay a foe, and wring with woe?');
-new Clues ('Everyone has me but nobody can lose me.');
+new Clues('Almost everyone sees me without noticing me, for what is beyond is what he or she seeks');
+new Clues('What do you use to hoe a row, slay a foe, and wring with woe?');
+new Clues('Everyone has me but nobody can lose me.');
 
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
@@ -40,7 +40,6 @@ checkLocalStorageForLife();
 
 function renderLife(life) {
   if (life <= 0) {
-    wrong();
     parentElementQuiz.removeEventListener('click', click);
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
@@ -49,9 +48,9 @@ function renderLife(life) {
     var lifeImage = document.createElement('img')
     lifeImage.setAttribute('src', lifeImages[0]);
     parentElementLife.appendChild(lifeImage);
-    alert('you are dead, Game Over');
+    gameOver();
     window.location.href = 'deathscreen.html';
-    
+
   } else {
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
@@ -78,8 +77,8 @@ function click(event) {
   } else {
     life--;
     renderLife(life);
-    if (life > 0){
-    wrong();
+    if (life > 0) {
+      wrong();
     }
   }
 }
@@ -98,9 +97,9 @@ function quizTwo() {
     } else {
       life--;
       renderLife(life)
-      if (life > 0){
+      if (life > 0) {
         wrong();
-        }
+      }
     }
   }
 }
@@ -121,9 +120,9 @@ function quizThree() {
     } else {
       life--;
       renderLife(life)
-      if (life > 0){
+      if (life > 0) {
         wrong();
-        }
+      }
     }
   }
 }
@@ -145,5 +144,16 @@ function right() {
   timeOut = setTimeout(clearX, 1000);
   function clearX() {
     parentElementAnswer.innerHTML = '';
+  }
+}
+function gameOver() {
+  var parentElementAnswer = document.getElementById('answer');
+  var gameOverImg = document.createElement('img');
+  gameOverImg.setAttribute('src', '../img/game-over.jpg');
+  gameOverImg.setAttribute('id', 'gameover');
+  parentElementAnswer.appendChild(gameOverImg);
+  timeOut = setTimeout(gameOverScreenTime, 3000);
+  function gameOverScreenTime() {
+    window.location.href = 'deathscreen.html';
   }
 }

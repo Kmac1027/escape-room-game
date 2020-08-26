@@ -83,3 +83,8 @@ header>p{
   top: 500px;
   left: 700px;
 }
+#gameOver {
+  position: absolute;
+  top: 500px;
+  left: 700px;
+}

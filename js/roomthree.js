@@ -41,7 +41,6 @@ checkLocalStorageForLife();
 
 function renderLife(life) {
   if (life <= 0) {
-    wrong();
     parentElementQuiz.removeEventListener('click', click);
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
@@ -50,8 +49,7 @@ function renderLife(life) {
     var lifeImage = document.createElement('img')
     lifeImage.setAttribute('src', lifeImages[0]);
     parentElementLife.appendChild(lifeImage);
-    alert('GAME OVER');
-    window.location.href = 'deathscreen.html';
+    gameOver();
 
   } else {
     parentElementLife.innerHTML = '';
@@ -152,3 +150,15 @@ function right() {
     parentElementAnswer.innerHTML = '';
   }
 }
+function gameOver() {
+  var parentElementAnswer = document.getElementById('answer');
+  var gameOverImg = document.createElement('img');
+  gameOverImg.setAttribute('src', '../img/game-over.jpg');
+  gameOverImg.setAttribute('id', 'gameover');
+  parentElementAnswer.appendChild(gameOverImg);
+  timeOut = setTimeout(gameOverScreenTime, 3000);
+  function gameOverScreenTime() {
+    window.location.href = 'deathscreen.html';
+  }
+}
+
