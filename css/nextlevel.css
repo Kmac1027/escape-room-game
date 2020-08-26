@@ -21,4 +21,10 @@ a{
     font-size: 2em;
     color: #992624;
     font-family: 'Big Shoulders Text', cursive;
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: #DEAA1F;
 }
