@@ -21,3 +21,9 @@
 ## Domain Model
 
 ![Domain Model](img/wireframe-domain/domain-model.png)
+
+- background music provided by - <https://www.fesliyanstudios.com/royalty-free-music>
+                                  <http://www.orangefreesounds.com/>
+                                  Private Hell Productions
+- little girl talking effect by: <https://www.youtube.com/watch?v=dTc20bVT180>
+

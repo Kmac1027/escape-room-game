@@ -1,5 +1,6 @@
 'use strict';
 
+
 var life = '';
 var timeOut = '';
 var parentElementQuiz = document.getElementById('clickable');
@@ -10,6 +11,8 @@ var allCluesArray = [];
 var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png',];
 
 
+var audio = new Audio('../audio/Behind-you.mp3');
+audio.play();
 
 function Clues(clue) {
   this.clue = clue;
@@ -121,7 +124,11 @@ function quizThree() {
       right();
       var jsonLife = JSON.stringify(life);
       localStorage.setItem('life', jsonLife);
-      window.location.href = 'roomonevictory.html';
+      timeOut = setTimeout(nextPage, 1000);
+      function nextPage() {
+        window.location.href = 'roomonevictory.html';
+      }
+
     } else {
       life--;
       renderLife(life);
@@ -133,6 +140,8 @@ function quizThree() {
 }
 
 function wrong() {
+  var audio = new Audio('../audio/sfx/wrong.wav');
+  audio.play();
   var parentElementWrong = document.getElementById('answer');
   var wrongImg = document.createElement('img');
   wrongImg.setAttribute('src', '../img/red-check.png');
@@ -143,6 +152,8 @@ function wrong() {
   }
 }
 function right() {
+  var audio = new Audio('../audio/sfx/correct.mp3');
+  audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var rightImg = document.createElement('img');
   rightImg.setAttribute('src', '../img/green-check.png');
@@ -153,6 +164,8 @@ function right() {
   }
 }
 function gameOver() {
+  var audio = new Audio('../audio/sfx/wrong.wav');
+  audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var gameOverImg = document.createElement('img');
   gameOverImg.setAttribute('src', '../img/game-over.jpg');
@@ -163,3 +176,5 @@ function gameOver() {
     window.location.href = 'deathscreen.html';
   }
 }
+var audio = new Audio('../audio/behind-you.mp3');
+ audio.play();

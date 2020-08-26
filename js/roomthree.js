@@ -14,9 +14,9 @@ function Clues(clue) {
   allCluesArray.push(this);
 }
 
-new Clues('I am a necessity to some and a treasure to many.');
-new Clues('I am always in shade.');
-new Clues('I get fiercely hot. I vary in sizes. Without me, the moon is all we\'ll see. It\'s impossible to walk into a room without at least one of me in them.');
+new Clues('Your first riddle is: I am a necessity to some and a treasure to many.');
+new Clues('Your second riddle is: I am always in shade.');
+new Clues('Your third riddle is: I get fiercely hot. I vary in sizes. Without me, the moon is all we\'ll see. It\'s impossible to walk into a room without at least one of me in them.');
 
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
@@ -30,7 +30,7 @@ checkLocalStorageForName();
 
 function checkLocalStorageForLife() {
   if (localStorage.getItem('life') === null) {
-    life = 5
+    life = 5;
   } else {
     var getLifeValue = localStorage.getItem('life');
     var parseLife = JSON.parse(getLifeValue);
@@ -46,8 +46,9 @@ function renderLife(life) {
     var maxLife = document.createElement('p');
     maxLife.textContent = life;
     parentElementLife.appendChild(maxLife);
-    var lifeImage = document.createElement('img')
+    var lifeImage = document.createElement('img');
     lifeImage.setAttribute('src', lifeImages[0]);
+    lifeImage.setAttribute('id', 'lifeicon');
     parentElementLife.appendChild(lifeImage);
     gameOver();
 
@@ -58,6 +59,7 @@ function renderLife(life) {
     parentElementLife.appendChild(maxLife);
     var lifeImage = document.createElement('img');
     lifeImage.setAttribute('src', lifeImages[life]);
+    lifeImage.setAttribute('id', 'lifeicon');
     parentElementLife.appendChild(lifeImage);
   }
 }
@@ -89,7 +91,7 @@ function quizTwo() {
   var clueText = document.createElement('p');
   clueText.textContent = allCluesArray[1].clue;
   parentElementRiddle.appendChild(clueText);
-  parentElementQuiz.addEventListener('click', click)
+  parentElementQuiz.addEventListener('click', click);
   function click(event) {
     var item = event.target.id;
     if (item === 'lamp') {
@@ -98,7 +100,7 @@ function quizTwo() {
       quizThree();
     } else {
       life--;
-      renderLife(life)
+      renderLife(life);
       if (life > 0) {
         wrong();
       }
@@ -119,10 +121,14 @@ function quizThree() {
       right();
       var jsonLife = JSON.stringify(life);
       localStorage.setItem('life', jsonLife);
-      window.location.href = 'roomthreevictory.html';
+      timeOut = setTimeout(nextPage, 1000);
+      function nextPage() {
+        window.location.href = 'roomthreevictory.html';
+      }
+     
     } else {
       life--;
-      renderLife(life)
+      renderLife(life);
       if (life > 0) {
         wrong();
       }
@@ -131,6 +137,8 @@ function quizThree() {
 }
 
 function wrong() {
+  var audio = new Audio('../audio/sfx/wrong.wav');
+  audio.play();
   var parentElementWrong = document.getElementById('answer');
   var wrongImg = document.createElement('img');
   wrongImg.setAttribute('src', '../img/red-check.png');
@@ -141,6 +149,8 @@ function wrong() {
   }
 }
 function right() {
+  var audio = new Audio('../audio/sfx/correct.mp3');
+  audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var rightImg = document.createElement('img');
   rightImg.setAttribute('src', '../img/green-check.png');
@@ -151,6 +161,8 @@ function right() {
   }
 }
 function gameOver() {
+  var audio = new Audio('../audio/sfx/wrong.wav');
+  audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var gameOverImg = document.createElement('img');
   gameOverImg.setAttribute('src', '../img/game-over.jpg');
@@ -161,4 +173,5 @@ function gameOver() {
     window.location.href = 'deathscreen.html';
   }
 }
-
+var audio = new Audio('../audio/darkshadows.mp3');
+ audio.play();

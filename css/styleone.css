@@ -74,10 +74,6 @@ header>p{
   float: right;
 }
 
-*{
-  border-style: 1px solid white;
-}
-
 #answer {
   position: absolute;
   top: 500px;

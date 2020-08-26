@@ -14,9 +14,9 @@ function Clues(clue) {
   allCluesArray.push(this);
 }
 
-new Clues('Almost everyone sees me without noticing me, for what is beyond is what he or she seeks');
-new Clues('What do you use to hoe a row, slay a foe, and wring with woe?');
-new Clues('Everyone has me but nobody can lose me.');
+new Clues('Your first riddle is: Almost everyone sees me without noticing me, for what is beyond is what he or she seeks');
+new Clues('Your second riddle is: What do you use to hoe a row, slay a foe, and wring with woe?');
+new Clues('Your third riddle is: Everyone has me but nobody can lose me.');
 
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
@@ -29,7 +29,7 @@ checkLocalStorageForName();
 
 function checkLocalStorageForLife() {
   if (localStorage.getItem('life') === null) {
-    life = 5
+    life = 5;
   } else {
     var getLifeValue = localStorage.getItem('life');
     var parseLife = JSON.parse(getLifeValue);
@@ -45,12 +45,11 @@ function renderLife(life) {
     var maxLife = document.createElement('p');
     maxLife.textContent = life;
     parentElementLife.appendChild(maxLife);
-    var lifeImage = document.createElement('img')
+    var lifeImage = document.createElement('img');
     lifeImage.setAttribute('src', lifeImages[0]);
+    lifeImage.setAttribute('id', 'lifeicon');
     parentElementLife.appendChild(lifeImage);
     gameOver();
-    window.location.href = 'deathscreen.html';
-
   } else {
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
@@ -58,6 +57,7 @@ function renderLife(life) {
     parentElementLife.appendChild(maxLife);
     var lifeImage = document.createElement('img');
     lifeImage.setAttribute('src', lifeImages[life]);
+    lifeImage.setAttribute('id', 'lifeicon');
     parentElementLife.appendChild(lifeImage);
   }
 }
@@ -87,7 +87,7 @@ function quizTwo() {
   var clueText = document.createElement('p');
   clueText.textContent = allCluesArray[1].clue;
   parentElementRiddle.appendChild(clueText);
-  parentElementQuiz.addEventListener('click', click)
+  parentElementQuiz.addEventListener('click', click);
   function click(event) {
     var item = event.target.alt;
     if (item === 'hands') {
@@ -96,7 +96,7 @@ function quizTwo() {
       quizThree();
     } else {
       life--;
-      renderLife(life)
+      renderLife(life);
       if (life > 0) {
         wrong();
       }
@@ -116,10 +116,13 @@ function quizThree() {
       right();
       var jsonLife = JSON.stringify(life);
       localStorage.setItem('life', jsonLife);
-      window.location.href = 'roomtwovictory.html';
+      timeOut = setTimeout(nextPage, 1000);
+      function nextPage() {
+        window.location.href = 'roomtwovictory.html';
+      }
     } else {
       life--;
-      renderLife(life)
+      renderLife(life);
       if (life > 0) {
         wrong();
       }
@@ -127,6 +130,8 @@ function quizThree() {
   }
 }
 function wrong() {
+  var audio = new Audio('../audio/sfx/wrong.wav');
+  audio.play();
   var parentElementWrong = document.getElementById('answer');
   var wrongImg = document.createElement('img');
   wrongImg.setAttribute('src', '../img/red-check.png');
@@ -137,6 +142,8 @@ function wrong() {
   }
 }
 function right() {
+  var audio = new Audio('../audio/sfx/correct.mp3');
+  audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var rightImg = document.createElement('img');
   rightImg.setAttribute('src', '../img/green-check.png');
@@ -147,6 +154,8 @@ function right() {
   }
 }
 function gameOver() {
+  var audio = new Audio('../audio/sfx/wrong.wav');
+  audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var gameOverImg = document.createElement('img');
   gameOverImg.setAttribute('src', '../img/game-over.jpg');
@@ -157,3 +166,6 @@ function gameOver() {
     window.location.href = 'deathscreen.html';
   }
 }
+var audio = new Audio('../audio/room2.mp3');
+ audio.play();
+  

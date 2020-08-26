@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Escape Room</title>
-    <link href="../css/reset.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/stylethree.css" rel="stylesheet" type="text/css"/>
-  </head>
-  <body>
-    
-    <header>
-      <section>Level 3</section>
-      <section id="playerName"></section>
-      <section id="life"></section>
-    </header>
-    </header>
-    <main>
-      <div id="answer"></div>
-      <section id="clickable">
-        <img src="../img/apartment-bg.jpg" usemap="#image-map">
-        <map name="image-map">
-          <area id="mug" target="_self" alt="mug" title="mug" coords="548,627,522,596" shape="rect">
-          <area id="lamp" target="_self" alt="lamp" title="lamp" coords="497,374,528,420" shape="rect">
-          <area id="bulb" target="_self" alt="bulb" title="bulb" coords="594,269,610,293" shape="rect">
-      </map>
-      </section>
-    </main>
-    <footer>
+
+<head>
+  <title>Escape Room</title>
+  <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../css/stylethree.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&family=Cardo:wght@700&family=Eater&family=Germania+One&family=Spectral&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <p>Escape Room </p> 
+    <section id="playerNav">Level 3</section>
+    <section id="playerName"></section>
+    <section id="life"></section>
+  </header>
+  <main>
+    <div id="answer"></div>
+    <section id="clickable">
+
       <section id="riddle">
       </section>
-    </footer>
+      <img id="centerPic" src="../img/apartment-bg.jpg" usemap="#image-map">
+
+        <map name="image-map">
+          <area id="mug" target="_self" alt="mug" title="mug" coords="443,504,462,531" shape="rect">
+          <area id="lamp" target="_self" alt="lamp" title="lamp" coords="419,312,451,354" shape="rect">
+          <area id="bulb" target="_self" alt="bulb" title="bulb" coords="516,245,503,224" shape="rect">
+      </map>
+    </section>
+    <audio>
+        <source src="../audio/darkshadows.mp3" type="audio/mp3" autoplay="true" loop=infinite></audio>
+  </main>
+  <footer>
     <script src="../js/roomthree.js"></script>
-  </body>
+  </footer>
+</body>
+
 </html>
