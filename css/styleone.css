@@ -12,6 +12,20 @@ h1 {
   font-size: 5rem;
   color: lightgrey;
 }
+#riddle{
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 1.8em;
+  color: white;
+  text-align: center;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+p {
+  font-family: 'Big Shoulders Text', cursive;
+}
+
+
 #centerPic {
   display: block;
   margin-left: auto;
@@ -27,60 +41,53 @@ header>p{
   color: #5b1615;
  }
 
-#riddle{
-  font-family: 'Franklin Gothic regular', 'Arial Narrow', Arial, sans-serif; 
-  font-size: 1.8em;
-  color: white;
-  text-align: center;
-  margin: 10px;
-  margin-top: 20px;
-}
-
-#playerNav {
-  font-family: 'Big Shoulders Text', cursive;
-  font-size: 2rem;
-  float: right;
-  color: #DEAA1F;
-  margin-left: 50px;
-  margin-right: 20px;
-  margin-top: 10px; 
-  margin-left: auto;
-  margin-right: 10px;
-}
-#playerName {
-  font-family: 'Big Shoulders Text', cursive;
-  font-size: 2em;
-  float: left;
-  color: white;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-}
-#life {
-  font-family: 'Big Shoulders Text', cursive;
-  display: inline-flex;
-  font-size: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  color: #2d75be;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-} 
-
-#lifeicon {
-  margin-top: 3px;
-  margin-left: 23px;
-  float: right;
-}
-
-#answer {
-  position: absolute;
-  top: 500px;
-  left: 700px;
-}
-#gameOver {
-  position: absolute;
-  top: 500px;
-  left: 700px;
-}
+ 
+ #playerNav {
+   font-family: 'Big Shoulders Text', cursive;
+   font-size: 2rem;
+   float: right;
+   color: #DEAA1F;
+   margin-left: 50px;
+   margin-right: 20px;
+   margin-top: 10px; 
+   margin-left: auto;
+   margin-right: 10px;
+  }
+  #playerName {
+    font-family: 'Big Shoulders Text', cursive;
+    font-size: 2em;
+    float: left;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  #life {
+    font-family: 'Big Shoulders Text', cursive;
+    display: inline-flex;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #2d75be;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  } 
+  
+  #lifeicon {
+    margin-top: 3px;
+    margin-left: 23px;
+    float: right;
+  }
+  
+  #answer {
+    position: absolute;
+    top: 500px;
+    left: 700px;
+  }
+  #gameOver {
+    position: absolute;
+    top: 500px;
+    left: 700px;
+  }
+   
