@@ -43,7 +43,6 @@ checkLocalStorageForLife();
 
 function renderLife(life) {
   if (life <= 0) {
-    wrong();
     parentElementQuiz.removeEventListener('click', click);
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
@@ -54,7 +53,7 @@ function renderLife(life) {
     lifeImage.setAttribute('id', 'lifeicon');
     parentElementLife.appendChild(lifeImage);
     window.location.href = 'deathscreen.html';
-    alert('You are Dead, Game Over');
+    gameOver();
   } else {
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
@@ -151,5 +150,16 @@ function right() {
   timeOut = setTimeout(clearX, 1000);
   function clearX() {
     parentElementAnswer.innerHTML = '';
+  }
+}
+function gameOver() {
+  var parentElementAnswer = document.getElementById('answer');
+  var gameOverImg = document.createElement('img');
+  gameOverImg.setAttribute('src', '../img/game-over.jpg');
+  gameOverImg.setAttribute('id', 'gameover');
+  parentElementAnswer.appendChild(gameOverImg);
+  timeOut = setTimeout(gameOverScreenTime, 3000);
+  function gameOverScreenTime() {
+    window.location.href = 'deathscreen.html';
   }
 }
