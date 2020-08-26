@@ -1,19 +1,72 @@
+header {
+  display: inline-flex;
+}
 body {
   background-color: black;
   text-align: center;
   color: white;
 }
 
-h1{
+h1 {
   font-size: 5rem;
   color: lightgrey;
 }
-h2{
-  font-size: 2rem;
-  color: lightgrey;
+#centerPic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
-p{
-color: grey;
-font-size: 1.5rem;
+
+#riddle{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  margin: 10px;
+  margin-top: 40px;
+}
+#playerNav {
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 2rem;
+  float: right;
+  color: #DEAA1F;
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 10px; */
+  margin-left: auto;
+  margin-right: 10px;
+}
+#playerName {
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 2em;
+  float: left;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+#life {
+  font-family: 'Big Shoulders Text', cursive;
+  display: inline-flex;
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #2d75be;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+} 
+
+#lifeicon {
+  margin-top: 3px;
+  margin-left: 23px;
+  float: right;
+
+}
+
+*{
+  border-style: 1px solid white;
 }
