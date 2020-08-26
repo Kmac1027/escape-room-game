@@ -1,5 +1,6 @@
 'use strict';
 
+
 var life = '';
 var timeOut = '';
 var parentElementQuiz = document.getElementById('clickable');
@@ -135,6 +136,8 @@ function quizThree() {
 }
 
 function wrong() {
+  var audio = new Audio('../audio/sfx/wrong.wav');
+  audio.play();
   var parentElementWrong = document.getElementById('answer');
   var wrongImg = document.createElement('img');
   wrongImg.setAttribute('src', '../img/red-check.png');
@@ -145,6 +148,8 @@ function wrong() {
   }
 }
 function right() {
+  var audio = new Audio('../audio/sfx/correct.m4a');
+  audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var rightImg = document.createElement('img');
   rightImg.setAttribute('src', '../img/green-check.png');
@@ -155,6 +160,8 @@ function right() {
   }
 }
 function gameOver() {
+  var audio = new Audio('../audio/sfx/wrong.wav');
+  audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var gameOverImg = document.createElement('img');
   gameOverImg.setAttribute('src', '../img/game-over.jpg');
