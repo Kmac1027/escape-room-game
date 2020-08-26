@@ -49,8 +49,6 @@ function renderLife(life) {
     lifeImage.setAttribute('src', lifeImages[0]);
     parentElementLife.appendChild(lifeImage);
     gameOver();
-    window.location.href = 'deathscreen.html';
-
   } else {
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
