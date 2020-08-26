@@ -173,4 +173,5 @@ function gameOver() {
     window.location.href = 'deathscreen.html';
   }
 }
-
+var audio = new Audio('../audio/darkshadows.mp3');
+ audio.play();

@@ -176,3 +176,5 @@ function gameOver() {
     window.location.href = 'deathscreen.html';
   }
 }
+var audio = new Audio('../audio/behind-you.mp3');
+ audio.play();
