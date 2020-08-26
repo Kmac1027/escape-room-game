@@ -1,12 +1,13 @@
 'use strict';
 
 var life = '';
+var timeOut = '';
 var parentElementQuiz = document.getElementById('clickable');
 var parentElementRiddle = document.getElementById('riddle');
 var parentElementLife = document.getElementById('life');
 var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
-var lifeImages = ['./img/play-health-stat-dead.png', './img/play-health-stat-1.png', './img/play-health-stat-2.png', './img/play-health-stat-3.png', './img/play-health-stat-4.png', './img/play-health-stat-5.png'];
+var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png'];
 
 function Clues (clue){
   this.clue = clue;
@@ -39,6 +40,7 @@ checkLocalStorageForLife();
 
 function renderLife(life) {
   if (life <= 0) {
+    wrong();
     parentElementQuiz.removeEventListener('click', click);
     parentElementLife.innerHTML = '';
     var maxLife = document.createElement('p');
@@ -71,13 +73,13 @@ function click(event) {
   var item = event.target.alt;
   if (item === 'windowone' || item === 'windowtwo') {
     parentElementQuiz.removeEventListener('click', click);
-    alert('correct');
+    right();
     quizTwo();
   } else {
     life--;
     renderLife(life);
     if (life > 0){
-    alert('wrong, try again')
+    wrong();
     }
   }
 }
@@ -91,12 +93,14 @@ function quizTwo() {
     var item = event.target.alt;
     if (item === 'hands') {
       parentElementQuiz.removeEventListener('click', click);
-      alert('correct');
+      right();
       quizThree();
     } else {
       life--;
       renderLife(life)
-      alert('wrong, try again')
+      if (life > 0){
+        wrong();
+        }
     }
   }
 }
@@ -110,14 +114,36 @@ function quizThree() {
     var item = event.target.alt;
     if (item === 'shadow') {
       parentElementQuiz.removeEventListener('click', click);
-      alert('correct');
+      right();
       var jsonLife = JSON.stringify(life);
       localStorage.setItem('life', jsonLife);
-      window.location.href = 'roomthreevictory.html';
+      window.location.href = 'roomtwovictory.html';
     } else {
       life--;
       renderLife(life)
-      alert('wrong, try again')
+      if (life > 0){
+        wrong();
+        }
     }
+  }
+}
+function wrong() {
+  var parentElementWrong = document.getElementById('answer');
+  var wrongImg = document.createElement('img');
+  wrongImg.setAttribute('src', '../img/red-check.png');
+  parentElementWrong.appendChild(wrongImg);
+  timeOut = setTimeout(clearX, 1000);
+  function clearX() {
+    parentElementWrong.innerHTML = '';
+  }
+}
+function right() {
+  var parentElementAnswer = document.getElementById('answer');
+  var rightImg = document.createElement('img');
+  rightImg.setAttribute('src', '../img/green-check.png');
+  parentElementAnswer.appendChild(rightImg);
+  timeOut = setTimeout(clearX, 1000);
+  function clearX() {
+    parentElementAnswer.innerHTML = '';
   }
 }

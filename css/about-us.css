@@ -1,14 +1,28 @@
 body{
-  margin:5%;
+  margin: 2% 5%;
   background-image: url(https://images.unsplash.com/photo-1534193708707-6be94c4f67d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80);
   font-family: 'Raleway', sans-serif;
 }
 
-img{
-  height: 1000px;
+#allbios{
+  display: flex;
+  justify-content: space-evenly;
 }
 
-h1 {
+img{
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3%;
+  filter: grayscale(100%);
+}
+
+img:hover{
+  filter: grayscale(0);
+}
+
+h1{
   text-align: center;
   font-size: 4rem;
   text-decoration: underline;
@@ -17,19 +31,6 @@ h1 {
 
 h2{
   font-size: 3em;
-  text-align: center;
-  text-decoration: underline;
-  padding-bottom: 10px;
-}
-
-.bio {
-  width: 300px;
-  display: inline-block;
-  margin: 2%;
-  border: 3px solid black;
-  border-radius: 10%;
-  height: 420px;
-}
 
 button{
   background-color: black;
@@ -40,7 +41,3 @@ button{
   align-items: center;
   text-align: center;
   text-decoration: none;
-  text-align: center;
-  position: block;
-  margin: 20px 50%;
-}
