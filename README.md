@@ -27,13 +27,14 @@
 1. <https://www.fesliyanstudios.com/royalty-free-music>
 1. <http://www.orangefreesounds.com/>
 1. Private Hell Productions
-1. https://www.bensound.com/
+1. <https://www.bensound.com>
 1. little girl talking effect by: <https://www.youtube.com/watch?v=dTc20bVT180>
 
 ## Photos provided by
+
 - Unsplash
   1. Thanks to Mikhail Elfimov for sharing their work on Unsplash. Dark room with silhouette.
-  1. Thanks to Jonathan Borba for sharing their work on Unsplash. 
+  1. Thanks to Jonathan Borba for sharing their work on Unsplash.
   1. Thanks to Ivan Yeo for sharing their work on Unsplash.
   1. Thanks to Harmanjot Kaur for sharing their work on Unsplash.
   1. Thanks to Robert Zunikoff for sharing their work on Unsplash.
