@@ -1,34 +1,46 @@
 body {
   background-color: black;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   background-image: url("../img/scary-clown.jpg");
-  border-radius: 25px;
-  background-position: center;
+  /* border-radius: 25px; */
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
-  background-size: 1590px 1090px;
+  background-size: 100%;
   border-radius: 25px;
   text-align: center;
-  font-family: 'Big Shoulders Text', cursive;
+  vertical-align: middle;
+  /* font-family: 'Big Shoulders Text', cursive; */
+  width: 100%;
+}
+
+#tryagain{
+  margin-top: 15%;
 }
 
 h1 {
-  margin: 200px 0 100px 0;
-  color: red;
-  font-size: 4em;
+  /* margin: 200px 0 100px 0; */
+  color: #9d211f;
+  font-size: 5em;
+  line-height: 1.3em;
+  font-family: 'Germania One', cursive;
 }
-#img {
+/* #img {
   padding-bottom: 10px;
-}
+} */
 
 a {
   color: white;
   font-display: block;
-  margin-top: 100px;
-  line-height: 100px;
+  /* margin-top: 100px; */
+  line-height: 1.7em;
   font-size: 3em;
   text-decoration: none;
-  margin: 0 0 100px 0;
+  /* margin: 0 0 100px 0; */
+  /* font-family: 'Germania One', cursive; */
+  /* font-family: sans-serif; */
+  font-family: 'Big Shoulders Text', cursive;
+  font-weight: bolder;
 }
   
 a:hover {
