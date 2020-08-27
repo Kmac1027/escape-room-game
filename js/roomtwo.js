@@ -7,7 +7,7 @@ var parentElementRiddle = document.getElementById('riddle');
 var parentElementLife = document.getElementById('life');
 var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
-var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png'];
+var lifeImages = ['../img/play-health-stat-dead-small.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png'];
 
 function Clues(clue) {
   this.clue = clue;

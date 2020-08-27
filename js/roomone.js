@@ -8,7 +8,7 @@ var parentElementRiddle = document.getElementById('riddle');
 var parentElementLife = document.getElementById('life');
 var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
-var lifeImages = ['../img/play-health-stat-dead.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png',];
+var lifeImages = ['../img/play-health-stat-dead-small.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png',];
 
 
 var audio = new Audio('../audio/Behind-you.mp3');
@@ -55,7 +55,6 @@ function renderLife(life) {
     lifeImage.setAttribute('src', lifeImages[0]);
     lifeImage.setAttribute('id', 'lifeicon');
     parentElementLife.appendChild(lifeImage);
-    window.location.href = 'deathscreen.html';
     gameOver();
   } else {
     parentElementLife.innerHTML = '';
