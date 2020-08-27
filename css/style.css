@@ -235,19 +235,19 @@ body {
   }
 }
 
-.fadeOut {
+/* .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
-}
+} */
 
-@-webkit-keyframes masked-animation {
+/* @-webkit-keyframes masked-animation {
   0% {
     background-position: center;
   }
   100% {
     background-position: center;
   }
-}
+} */
 
 #start {
   position: absolute;
@@ -268,20 +268,13 @@ body {
   }
 }
 
-/* h1{
-  background-image: url("../img/doll-heads-bg.jpg");
-}
- */
-
 
 html,
 body {
   margin: 0;
   padding: 0;
-  
   text-align: center;
   color: grey
-  background-image: url("../img/doll-heads-bg.jpg");
 }
 
 a {
@@ -303,7 +296,6 @@ a {
 }
 
 #viewport .smoke {
-  
   text-align: center;
   position: absolute;
   width: 100%;

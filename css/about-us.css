@@ -6,6 +6,7 @@ body{
 #allbios{
   display: flex;
   justify-content: space-evenly;
+ 
 }
 img{
   width: 200px;
