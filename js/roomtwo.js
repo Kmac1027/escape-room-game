@@ -69,7 +69,7 @@ clueText.textContent = allCluesArray[0].clue;
 parentElementRiddle.appendChild(clueText);
 parentElementQuiz.addEventListener('click', click);
 function click(event) {
-  var item = event.target.alt;
+  var item = event.target.id;
   if (item === 'windowone' || item === 'windowtwo') {
     parentElementQuiz.removeEventListener('click', click);
     right();
@@ -89,7 +89,7 @@ function quizTwo() {
   parentElementRiddle.appendChild(clueText);
   parentElementQuiz.addEventListener('click', click);
   function click(event) {
-    var item = event.target.alt;
+    var item = event.target.id;
     if (item === 'hands') {
       parentElementQuiz.removeEventListener('click', click);
       right();
@@ -110,7 +110,7 @@ function quizThree() {
   parentElementRiddle.appendChild(clueText);
   parentElementQuiz.addEventListener('click', click)
   function click(event) {
-    var item = event.target.alt;
+    var item = event.target.id;
     if (item === 'shadow') {
       parentElementQuiz.removeEventListener('click', click);
       right();
