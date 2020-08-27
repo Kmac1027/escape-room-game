@@ -6,15 +6,18 @@
   <link rel="stylesheet" href="../css/deathscreen.css">
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&family=Eater&family=Germania+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
 </head>
-<h1>you are dead</h1>
 <body>
-  <div id="img">
-  <img src="../img/play-health-stat-dead.png">
-  </div>
+
+  <audio>
+      <source src="../audio/death.mp3" type="audio/mp3" autoplay="true" loop=infinite>
+    </audio>
+
   <div id="tryagain">
+    <h1>You are dead.</h1>
   <a href="../index.html">Try Again</a><br>
-  <a href="../about-us.html">Exit</a>
+  <a href="about-us.html">Exit</a>
   </div>
-  
+  <script src="../js/death.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,34 @@
+
+body{
+    background-image: url('../img/hall.jpg');
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    margin:0px;
+    color: whitesmoke;
+    background-color: black;
+    font-family: 'Big Shoulders Text', cursive;
+}
+
+h1{
+    margin: 120px 0 20px 0;
+    font-size: 2em;
+}
+
+h2{
+    font-size: 1.2em;
+    margin-bottom: 50px;
+}
+
+a{
+    font-size: 1.2em;
+    color: #992624;
+    font-family: 'Big Shoulders Text', cursive;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #DEAA1F;
+}
