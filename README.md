@@ -47,3 +47,8 @@ People love escape rooms, but are stuck at home. This site gives users the abili
 - Michael Eclavea - JQuery/Voice Acting/HTML/CSS/JavaScript/codepenIO
 - Sara Strasner - Documentation/HTML/CSS/JavaScript
 - Kevin McNeil - HTML/CSS/Javascript/Band Names/Snacks
+
+## Graphic Design tools and resources
+- Adobe Photoshop, Illustrator, and XD,
+- https://www.hexcolortool.com/
+- Google Fonts
