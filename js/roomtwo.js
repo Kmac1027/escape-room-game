@@ -1,5 +1,6 @@
 'use strict';
 
+//global variables
 var life = '';
 var timeOut = '';
 var parentElementQuiz = document.getElementById('clickable');
@@ -9,6 +10,7 @@ var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
 var lifeImages = ['../img/play-health-stat-dead-small.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png'];
 
+//constructor function for clues made to easily change clues
 function Clues(clue) {
   this.clue = clue;
   allCluesArray.push(this);
@@ -18,6 +20,7 @@ new Clues('Your first riddle is: Almost everyone sees me without noticing me, fo
 new Clues('Your second riddle is: What do you use to hoe a row, slay a foe, and wring with woe.');
 new Clues('Your third riddle is: Everyone has me but nobody can lose me.');
 
+//check local storage for name via user input on index.html
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
   var parseName = JSON.parse(playerName);
@@ -27,6 +30,7 @@ function checkLocalStorageForName() {
 }
 checkLocalStorageForName();
 
+//check local storage for what the life is at
 function checkLocalStorageForLife() {
   if (localStorage.getItem('life') === null) {
     life = 5;
@@ -38,6 +42,7 @@ function checkLocalStorageForLife() {
 }
 checkLocalStorageForLife();
 
+//renders the life found inlocal storage to screen and handles game over
 function renderLife(life) {
   if (life <= 0) {
     parentElementQuiz.removeEventListener('click', click);
@@ -62,7 +67,7 @@ function renderLife(life) {
   }
 }
 
-//quiz 1
+//question 1
 renderLife(life);
 var clueText = document.createElement('p');
 clueText.textContent = allCluesArray[0].clue;
@@ -82,6 +87,7 @@ function click(event) {
     }
   }
 }
+//question 2
 function quizTwo() {
   parentElementRiddle.innerHTML = '';
   var clueText = document.createElement('p');
@@ -103,6 +109,7 @@ function quizTwo() {
     }
   }
 }
+//question 3
 function quizThree() {
   parentElementRiddle.innerHTML = '';
   var clueText = document.createElement('p');
@@ -129,6 +136,8 @@ function quizThree() {
     }
   }
 }
+
+//function for wrong answer inputs
 function wrong() {
   var audio = new Audio('../audio/sfx/wrong.wav');
   audio.play();
@@ -141,6 +150,8 @@ function wrong() {
     parentElementWrong.innerHTML = '';
   }
 }
+
+//function for right answer inputs
 function right() {
   var audio = new Audio('../audio/sfx/correct.mp3');
   audio.play();
@@ -153,6 +164,8 @@ function right() {
     parentElementAnswer.innerHTML = '';
   }
 }
+
+//function to handle game over
 function gameOver() {
   var audio = new Audio('../audio/sfx/wrong.wav');
   audio.play();
@@ -166,6 +179,7 @@ function gameOver() {
     window.location.href = 'deathscreen.html';
   }
 }
+// for playing audio correctly in the background
 var audio = new Audio('../audio/room2.mp3');
  audio.play();
   

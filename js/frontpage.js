@@ -1,9 +1,12 @@
 'use strict';
+//clearing local storage to ensure our user gets to start fresh
 localStorage.clear();
-var form = document.getElementById('playerName');
 
+//global variable and event listen created
+var form = document.getElementById('playerName');
 form.addEventListener('submit', submit);
 
+//function to run everything once the submit button is clicked
 function submit(event) {
   event.preventDefault();
   var playerName = event.target.playername.value;
@@ -74,14 +77,6 @@ $(function() {
     }, 
     Math.random() * 3e3);
   }
-  // $('body').keypress(function() {
-  //   $('body').addClass('fadeOut');
-  //   setTimeout(function() {
-  //     $('#tv').show();
-  //   }, 1000);
-
-  //   console.log('Handler for .keypress() called.');
-  // });
 }());
 var tag = document.createElement('script');
 tag.src = 'https://www.youtube.com/player_api';
@@ -175,5 +170,3 @@ $('.hi span').on('click', function() {
     tv.unMute();
   }
 });
-// var audio = new Audio('../audio/field.mp3');
-// audio.play();

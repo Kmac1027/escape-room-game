@@ -1,5 +1,6 @@
 'use strict';
 
+//global variables
 var life = '';
 var timeOut = '';
 var parentElementQuiz = document.getElementById('clickable');
@@ -9,6 +10,7 @@ var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
 var lifeImages = ['../img/play-health-stat-dead-small.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png'];
 
+//constructor function for clues made to easily change clues
 function Clues(clue) {
   this.clue = clue;
   allCluesArray.push(this);
@@ -18,6 +20,7 @@ new Clues('Your first riddle is: I am a necessity to some and a treasure to many
 new Clues('Your second riddle is: I am always in shade.');
 new Clues('Your third riddle is: I get fiercely hot. I vary in sizes. Without me, the moon is all we\'ll see. It\'s impossible to walk into a room without at least one of me in them.');
 
+//check local storage for name via user input on index.html
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
   var parseName = JSON.parse(playerName);
@@ -28,6 +31,7 @@ function checkLocalStorageForName() {
 }
 checkLocalStorageForName();
 
+//check local storage for what the life is at
 function checkLocalStorageForLife() {
   if (localStorage.getItem('life') === null) {
     life = 5;
@@ -39,6 +43,7 @@ function checkLocalStorageForLife() {
 }
 checkLocalStorageForLife();
 
+//renders the life found inlocal storage to screen and handles game over
 function renderLife(life) {
   if (life <= 0) {
     parentElementQuiz.removeEventListener('click', click);
@@ -64,8 +69,7 @@ function renderLife(life) {
   }
 }
 
-
-//quiz 1
+//question 1
 renderLife(life);
 var clueText = document.createElement('p');
 clueText.textContent = allCluesArray[0].clue;
@@ -85,7 +89,8 @@ function click(event) {
     }
   }
 }
-// quiz 2
+
+// question 2
 function quizTwo() {
   parentElementRiddle.innerHTML = '';
   var clueText = document.createElement('p');
@@ -107,7 +112,8 @@ function quizTwo() {
     }
   }
 }
-//quiz 3
+
+//question 3
 function quizThree() {
   parentElementRiddle.innerHTML = '';
   var clueText = document.createElement('p');
@@ -136,6 +142,7 @@ function quizThree() {
   }
 }
 
+//function for wrong answer inputs
 function wrong() {
   var audio = new Audio('../audio/sfx/wrong.wav');
   audio.play();
@@ -148,6 +155,8 @@ function wrong() {
     parentElementWrong.innerHTML = '';
   }
 }
+
+//function for right answer inputs
 function right() {
   var audio = new Audio('../audio/sfx/correct.mp3');
   audio.play();
@@ -160,6 +169,8 @@ function right() {
     parentElementAnswer.innerHTML = '';
   }
 }
+
+//function to handle game over
 function gameOver() {
   var audio = new Audio('../audio/sfx/wrong.wav');
   audio.play();
@@ -173,5 +184,7 @@ function gameOver() {
     window.location.href = 'deathscreen.html';
   }
 }
+
+// for playing audio correctly in the background
 var audio = new Audio('../audio/darkshadows.mp3');
  audio.play();

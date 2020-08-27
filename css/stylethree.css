@@ -3,14 +3,14 @@ header {
   line-height: 3em;
 }
 body {
+  color: white;
   background-color: black;
   text-align: center;
-  color: white;
 }
 
 h1 {
-  font-size: 5rem;
   color: lightgrey;
+  font-size: 5rem;
 }
 #centerPic {
   display: block;
@@ -19,73 +19,69 @@ h1 {
 }
 
 header>p{
+  color: #5b1615;
+  font-size: 2.8em;
   font-family: 'Eater', cursive;
   -webkit-text-stroke: 1px black;
-  font-size: 2.8em;
   padding-right: 20px;
   margin-top: 5px;
-  color: #5b1615;
  }
 
 #riddle{
+  color: white;
   font-family: 'Franklin Gothic regular', 'Arial Narrow', Arial, sans-serif; 
   font-size: 1.8em;
-  color: white;
-  text-align: center;
   margin: 10px;
   margin-top: 20px;
+  text-align: center;
 }
 
 #playerNav {
+  color: #DEAA1F;
   font-family: 'Big Shoulders Text', cursive;
   font-size: 2rem;
   float: right;
-  color: #DEAA1F;
-  margin-left: 50px;
-  margin-right: 20px;
   margin-top: 10px; 
   margin-left: auto;
   margin-right: 10px;
 }
 #playerName {
+  color: white;
   font-family: 'Big Shoulders Text', cursive;
   font-size: 2em;
   float: left;
-  color: white;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
 }
 #life {
-  font-family: 'Big Shoulders Text', cursive;
-  display: inline-flex;
-  font-size: 2rem;
-  margin-left: auto;
-  margin-right: auto;
   color: #2d75be;
+  display: inline-flex;
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 2rem;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
 } 
 
 #lifeicon {
-  margin-top: 3px;
-  margin-left: 23px;
   float: right;
+  margin-left: 23px;
+  margin-top: 3px;
 }
 
 #answer{
+  left: 50%;
   margin: 0;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #gameOver {
+  left: 50%;
   margin: 0;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }

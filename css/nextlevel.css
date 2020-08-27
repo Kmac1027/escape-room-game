@@ -1,20 +1,20 @@
 
 body{
     background-image: url('../img/hall.jpg');
+    background-color: black;
     text-align: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    color: whitesmoke;
+    font-family: 'Big Shoulders Text', cursive;
     height: 100%;
     margin:0px;
-    color: whitesmoke;
-    background-color: black;
-    font-family: 'Big Shoulders Text', cursive;
 }
 
 h1{
-    margin: 120px 0 20px 0;
     font-size: 2em;
+    margin: 120px 0 20px 0;
 }
 
 h2{

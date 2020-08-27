@@ -1,6 +1,6 @@
 'use strict';
 
-
+// global variables
 var life = '';
 var timeOut = '';
 var parentElementQuiz = document.getElementById('clickable');
@@ -10,10 +10,7 @@ var parentElementPlayerName = document.getElementById('playerName');
 var allCluesArray = [];
 var lifeImages = ['../img/play-health-stat-dead-small.png', '../img/play-health-stat-1.png', '../img/play-health-stat-2.png', '../img/play-health-stat-3.png', '../img/play-health-stat-4.png', '../img/play-health-stat-5.png',];
 
-
-var audio = new Audio('../audio/Behind-you.mp3');
-audio.play();
-
+//constructor function for clues made to easily change clues
 function Clues(clue) {
   this.clue = clue;
   allCluesArray.push(this);
@@ -23,6 +20,7 @@ new Clues('Your first riddle is: I have many feet, but I cannot stand. I cannot 
 new Clues('Your second riddle is: I have hands that say "hi," but nobody waves back. I die when I am not needed.');
 new Clues('Your third riddle is: I am a foot long and am slippery.');
 
+//check local storage for name via user input on index.html
 function checkLocalStorageForName() {
   var playerName = localStorage.getItem('playerName');
   var parseName = JSON.parse(playerName);
@@ -33,6 +31,7 @@ function checkLocalStorageForName() {
 }
 checkLocalStorageForName();
 
+//check local storage for what the life is at
 function checkLocalStorageForLife() {
   if (localStorage.getItem('life') === null) {
     life = 5;
@@ -44,6 +43,7 @@ function checkLocalStorageForLife() {
 }
 checkLocalStorageForLife();
 
+//renders the life found inlocal storage to screen and handles game over
 function renderLife(life) {
   if (life <= 0) {
     parentElementQuiz.removeEventListener('click', click);
@@ -67,6 +67,7 @@ function renderLife(life) {
     parentElementLife.appendChild(lifeImage);
   }
 }
+
 // question 1
 renderLife(life);
 var clueText = document.createElement('p');
@@ -87,6 +88,7 @@ function click(event) {
     }
   }
 }
+
 // question 2
 function quizTwo() {
   parentElementRiddle.innerHTML = '';
@@ -109,6 +111,7 @@ function quizTwo() {
     }
   }
 }
+
 // question 3
 function quizThree() {
   parentElementRiddle.innerHTML = '';
@@ -138,6 +141,7 @@ function quizThree() {
   }
 }
 
+//function for wrong answer inputs
 function wrong() {
   var audio = new Audio('../audio/sfx/wrong.wav');
   audio.play();
@@ -150,6 +154,8 @@ function wrong() {
     parentElementWrong.innerHTML = '';
   }
 }
+
+//function for right answer inputs
 function right() {
   var audio = new Audio('../audio/sfx/correct.mp3');
   audio.play();
@@ -162,6 +168,8 @@ function right() {
     parentElementAnswer.innerHTML = '';
   }
 }
+
+//function to handle game over
 function gameOver() {
   var audio = new Audio('../audio/sfx/wrong.wav');
   audio.play();
@@ -175,5 +183,7 @@ function gameOver() {
     window.location.href = 'deathscreen.html';
   }
 }
+
+// for playing audio correctly in the background
 var audio = new Audio('../audio/behind-you.mp3');
  audio.play();
