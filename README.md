@@ -1,12 +1,15 @@
-# Escape Room Game 
+# Escape Room Game
+
 A short, horror themed, point and click adventure. The user is given a series of riddles/clues that direct them to click on different objects within the virtual room. Incorrect answers cause the user to lose limbs. We will store the user’s health in local storage as they move between stages/parts of the room. 
 
 ## Version 4.7.38
 
 ## Problem Domain
-People love escape rooms, but are stuck at home. This site gives users the ability to try an escape room from the comfort of their own homes. In addition to entertainment value, this game will also challenge users to think through a series of riddles. 
+
+People love escape rooms, but are stuck at home. This site gives users the ability to try an escape room from the comfort of their own homes. In addition to entertainment value, this game will also challenge users to think through a series of riddles.
 
 ## Wireframe
+
 ![Page 1](img/wireframe-domain/Web1920–0.png)
 ![Page 2](img/wireframe-domain/Web1920–1.png)
 ![Page 3](img/wireframe-domain/Web1920–2.png)
@@ -18,12 +21,15 @@ People love escape rooms, but are stuck at home. This site gives users the abili
 ![Page 9](img/wireframe-domain/Web1920–8.png)
 
 ## User Story
+
 - <https://trello.com/b/pA6ibMhR/escape-from-carebear-hell>
 
 ## Domain Model
+
 ![Domain Model](img/wireframe-domain/domain-model.png)
 
 ## Music and Sound Effects provided by
+
 1. <https://www.fesliyanstudios.com/royalty-free-music>
 1. <http://www.orangefreesounds.com/>
 1. Private Hell Productions
@@ -43,12 +49,14 @@ People love escape rooms, but are stuck at home. This site gives users the abili
   1. ![Green vector created by freepik](https://www.freepik.com/vectors/green)
 
 ## Creators
+
 - Keith Musig - Graphic Design/HTML/CSS/JavaScript
 - Michael Eclavea - JQuery/Voice Acting/HTML/CSS/JavaScript/codepenIO
 - Sara Strasner - Documentation/HTML/CSS/JavaScript
 - Kevin McNeil - HTML/CSS/Javascript/Band Names/Snacks
 
 ## Graphic Design tools and resources
+
 - Adobe Photoshop, Illustrator, and XD,
 - https://www.hexcolortool.com/
 - Google Fonts
