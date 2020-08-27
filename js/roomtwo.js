@@ -158,7 +158,7 @@ function gameOver() {
   audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var gameOverImg = document.createElement('img');
-  gameOverImg.setAttribute('src', '../img/game-over.jpg');
+  gameOverImg.setAttribute('src', '../img/game-over.png');
   gameOverImg.setAttribute('id', 'gameover');
   parentElementAnswer.appendChild(gameOverImg);
   timeOut = setTimeout(gameOverScreenTime, 3000);
