@@ -6,6 +6,7 @@ body{
 #allbios{
   display: flex;
   justify-content: space-evenly;
+ 
 }
 img{
   width: 200px;
@@ -31,6 +32,7 @@ h2{
 }
 section>p{
   margin: 10px;
+  line-height: 22px;
 }
 .bio {
   width:15%;
@@ -48,4 +50,14 @@ button{
   text-align: center;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+footer {
+  text-align: center;
+}
+
+button:hover {
+  color: #DEAA1F; 
 }

@@ -14,8 +14,8 @@ function Clues(clue) {
   allCluesArray.push(this);
 }
 
-new Clues('Your first riddle is: Almost everyone sees me without noticing me, for what is beyond is what he or she seeks');
-new Clues('Your second riddle is: What do you use to hoe a row, slay a foe, and wring with woe?');
+new Clues('Your first riddle is: Almost everyone sees me without noticing me, for what is beyond is what he or she seeks.');
+new Clues('Your second riddle is: What do you use to hoe a row, slay a foe, and wring with woe.');
 new Clues('Your third riddle is: Everyone has me but nobody can lose me.');
 
 function checkLocalStorageForName() {
@@ -158,7 +158,7 @@ function gameOver() {
   audio.play();
   var parentElementAnswer = document.getElementById('answer');
   var gameOverImg = document.createElement('img');
-  gameOverImg.setAttribute('src', '../img/game-over.jpg');
+  gameOverImg.setAttribute('src', '../img/game-over.png');
   gameOverImg.setAttribute('id', 'gameover');
   parentElementAnswer.appendChild(gameOverImg);
   timeOut = setTimeout(gameOverScreenTime, 3000);
