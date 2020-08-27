@@ -175,5 +175,5 @@ $('.hi span').on('click', function() {
     tv.unMute();
   }
 });
-var audio = new Audio('../audio/field.mp3');
-audio.play();
+// var audio = new Audio('../audio/field.mp3');
+// audio.play();
