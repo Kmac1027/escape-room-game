@@ -50,7 +50,14 @@ button{
   text-align: center;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 footer {
   text-align: center;
+}
+
+button:hover {
+  color: #DEAA1F; 
 }
