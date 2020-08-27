@@ -71,16 +71,17 @@ $(function() {
           $(c).remove();
           b();
         });
-    }, Math.random() * 3e3);
+    }, 
+    Math.random() * 3e3);
   }
-  $('body').keypress(function() {
-    $('body').addClass('fadeOut');
-    setTimeout(function() {
-      $('#tv').show();
-    }, 1000);
+  // $('body').keypress(function() {
+  //   $('body').addClass('fadeOut');
+  //   setTimeout(function() {
+  //     $('#tv').show();
+  //   }, 1000);
 
-    console.log('Handler for .keypress() called.');
-  });
+  //   console.log('Handler for .keypress() called.');
+  // });
 }());
 var tag = document.createElement('script');
 tag.src = 'https://www.youtube.com/player_api';

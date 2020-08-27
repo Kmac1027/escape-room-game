@@ -86,14 +86,14 @@ h1 {
   margin-top: 100px;
   margin-bottom: 80px;
   text-align: center;
-  text-outline: 1px;
-  text-outline-color: gray;
+  /* text-outline: 1px;
+  text-outline-color: gray; */
   line-height: 20px;
 }
 
 h2 {
   font-family: 'Germania One', cursive;
-  -webkit-text-stroke: 1px #992624;
+  /* -webkit-text-stroke: 1px #992624; */
   color: #992624;
   margin-top: 50px;
   text-align: center;
@@ -119,20 +119,6 @@ p{
   width: 400px;
   
 }
-
-/* 
-#st {
-  background: rgba(241, 214, 126, 0.842);
-  background-image: url("img/doll-heads-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 1590px 1060px;
-  border-style: solid;
-  border-width: thin;
-  border-color: black;
-  border-radius: 25px;
-  margin-left: 50px;
-  margin-right: 50px; 
-} */
 
 fieldset {
   text-align: center;
@@ -204,10 +190,11 @@ input{
   font-family: 'Big Shoulders Text', cursive;
 }
 
+
+
+
+
 /* codepen.io */
-
-
-
 
 body {
  
