@@ -1,7 +1,7 @@
 body{
-  margin: 2% 5%;
   background-image: url(https://images.unsplash.com/photo-1534193708707-6be94c4f67d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80);
   font-family: 'Raleway', sans-serif;
+  margin: 2% 5%;
 }
 #allbios{
   display: flex;
@@ -9,12 +9,12 @@ body{
  
 }
 img{
-  width: 200px;
   display: block;
+  filter: grayscale(100%);
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 3%;
-  filter: grayscale(100%);
+  width: 200px;
 }
 img:hover{
   filter: grayscale(0);
@@ -25,11 +25,12 @@ h1{
   font-weight: 600;
 }
 h2{
-  text-align: center;
   font-size: 2em;
   font-weight: 500;
   margin: 2%;
+  text-align: center;
 }
+
 section>p{
   margin: 10px;
   line-height: 22px;
@@ -41,18 +42,19 @@ section>p{
   flex-grow: 1;
 }
 button{
+  align-items: center;
   background-color: black;
   border: black;
-  color: white;
-  padding: 10px;
-  margin-left: 2%;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
   border-radius: 10px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: 2%;
+  text-align: center;
+  text-decoration: none;
+  
 }
 footer {
   text-align: center;
